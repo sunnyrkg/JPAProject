@@ -1,3 +1,4 @@
+<!--
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
@@ -11,15 +12,15 @@
 				        http://www.springframework.org/schema/tx/spring-tx.xsd">
         
     <context:component-scan base-package="com.zycus"/>
-    <!-- more bean definitions go here -->
+    &lt;!&ndash; more bean definitions go here &ndash;&gt;
     <bean class="org.springframework.jdbc.core.JdbcTemplate" id="jdbcTemplate">
     	<property name="dataSource" ref="jdbcConnectionDataSource"></property>
     </bean>
-	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="jdbcConnectionDataSource">
-		<property name="driverClassName" value="org.apache.derby.jdbc.ClientDriver"></property>
-		<property name="url" value="jdbc:derby://localhost:1527/sample"></property>
-		<property name="username" value="user"></property>
-		<property name="password" value="12345"></property>
+	<bean class="org.spingframework.jdbc.datasource.DriverManagerDataSource" id="jdbcConnectionDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/global"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value=""></property>
 	</bean>
 	<bean id="dataSource" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="jdbcConnectionDataSource"/>
@@ -28,6 +29,6 @@
 	   <property name="entityManagerFactory" ref="dataSource" />
 	</bean>
 	
-	<!-- Enabling @Transactional annotation -->
+	&lt;!&ndash; Enabling @Transactional annotation &ndash;&gt;
 	<tx:annotation-driven></tx:annotation-driven>
-</beans>
+</beans>-->

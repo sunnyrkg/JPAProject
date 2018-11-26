@@ -1,21 +1,14 @@
 package com.dao;
 
-import java.util.List;
+import com.entity.Product;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Query;
-import com.entity.Transaction;
-import com.entity.Account;
-import com.util.JPAUtil;
+public class ProductDAO extends GenericDAO<Product> {
 
-public class AccountDAO extends GenericDAO<Account> {
-
-	public AccountDAO() {
-		super(Account.class);
+	public ProductDAO() {
+		super(Product.class);
 		// TODO Auto-generated constructor stub
 	}
-	public double fetchBalance(int accountUid)
+	/*public double fetchBalance(int accountUid)
 	{
 		EntityManagerFactory entityManagerFactory = JPAUtil.getEntityManagerFactory();
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -59,5 +52,5 @@ public class AccountDAO extends GenericDAO<Account> {
 		return query.getResultList();
 		
 	
-	}
+	}*/
 }
